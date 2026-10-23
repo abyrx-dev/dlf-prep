@@ -8,4 +8,11 @@ with open("employees.txt", "w") as f:
 with open("employees.txt", "r") as f:
     content = f.read()
     print(content)
-    
+    try:
+         with open("missing.txt", "r") as f:
+             content = f.read()
+             print(content)
+    except FileNotFoundError:
+        print("Error: File not found!")
+        
+
