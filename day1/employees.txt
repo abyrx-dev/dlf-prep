@@ -1,0 +1,3 @@
+Abinesh,IT,38000
+Ravi,HR,42000
+priya,finance,35000
