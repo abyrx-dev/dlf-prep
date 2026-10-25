@@ -36,3 +36,27 @@ for row in rows:
 
 conn.close()
 
+
+conn = sqlite3.connect("company.db")
+cursor = conn.cursor()
+
+cursor.execute("SELECT * FROM employees WHERE department = 'IT'")
+rows = cursor.fetchall()
+
+for row in rows:
+    print(row)
+
+conn.close()
+conn = sqlite3.connect("company.db")
+cursor = conn.cursor()
+
+cursor.execute("UPDATE employees SET salary = 45000 WHERE name = 'Abinesh'")
+conn.commit()
+
+cursor.execute("SELECT * FROM employees")
+rows = cursor.fetchall()
+
+for row in rows:
+    print(row)
+
+conn.close()
